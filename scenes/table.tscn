@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b31yovqerg6bs"]
+
+[ext_resource type="Script" uid="uid://be583k3ndkpen" path="res://scripts/Hud/table.gd" id="1_02ppr"]
+
+[node name="Tree" type="Tree"]
+offset_right = 449.0
+offset_bottom = 477.0625
+mouse_filter = 1
+allow_reselect = true
+script = ExtResource("1_02ppr")

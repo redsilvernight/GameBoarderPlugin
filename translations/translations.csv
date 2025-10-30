@@ -1,0 +1,71 @@
+keys,en,fr
+GAMEBOARDER_SUBTITLE,[b]GameBoarder Backend for game developper[/b],[b]GameBoarder Backend pour développeur de jeux[/b]
+SUBTITLE,Here's an overview of your GameBoarder activity.,Voici un aperçu de votre activité GameBoarder.
+WELCOME_BACK,WELCOME BACK !,BIENVENUE !
+WELCOME,Welcome ,Bienvenue 
+LOGIN,Login,Connexion
+LOG_IN_TO_CONTINUE,Log in to continue,Connectez-vous pour continuer
+REGISTER,Register,Inscription
+PASSWORD,Password,Mot de passe
+REMEMBER_ME, Remember me, Se souvenir de moi
+USERNAME,Username,Pseudo
+PASSWORD_CONFIRMATION,Password confimration,Répétez le mot de passe
+SIGN_IN,Sign in,S'inscrire
+LIGHT_MODE,Light mode,Mode clair
+TOTAL_GAME,Total game,Jeux au Total
+LAST_ADDED,Last added,Dernier Ajout
+LAST_UPDATED,Last update,Dernière modification
+DARK_MODE,Dark mode,Mode sombre
+CURRENT_GAME,Current game:,Jeu sélectionné:
+GAME,Game,Jeux
+PLAYER,Player,Joueur
+SAVE,Save,Sauvegarde
+SETTINGS,Settings,Paramètres
+SELECT_GAME,-- Select a game --,-- Sélectionner un jeu --
+PROJECT_SUMMARY,Project summary,Résumé du projet
+RECENT_ACTIVITY,Recent activity,Acitivités récentes
+QUICK_SHORTCUT,Quick shortcut,Raccourcis
+MY_GAMES,My Games,Mes jeux
+NEW_GAME,New Game,Nouveau Jeu
+GAME_NAME,Game's name :,Nom du jeu :
+SAVE_MODE,Save mode,Mode de Sauvegarde
+MAX_SAVE_SLOT,Max save slot,Nombre de sauvegarde max
+CURRENT_PLAYER,Current game's players,Joueurs du jeu courant.
+NEW_PLAYER,New player,Nouveau joueur
+PLAYER_NAME,Player's name :,Nom du joueur :
+PLAYER_SCORE,Player's score :,Score du joueur :
+PLAYER_PASSWORD,Player's password :,Mot de passe du joueur :
+PLAYER_PASSWORD_CONFIRM,Player's confirm password :,Répéter le mot de passe du joueur :
+PLAYER_LIST,Players list,Liste des joueurs
+CURRENT_LEADERBOARD,Current game's leaderboards,Leaderboards du jeu sélectionné
+NEW_LEADERBOARD,New leaderboard,Nouveau leaderboard
+LEADERBOARD_NAME,Leaderboard's name :,Nom du leaderboard :
+LEADERBOARD_UNIQUE_SCORE,Unique score for player,Un score unique par joueur
+SCORE_UNIQUE,Unique score,Score unique
+NEW_SCORE,New score,Nouveau score
+CURRENT_SAVE,Current game's save,Sauvegarde du jeu sélectionné
+SLOT,Slot,Emplacement
+FILE_SIZE,File size (mb),Taille du fichier (mb)
+NAME,Name,Nom
+DELETE,Delete,Supprimé
+CREATED_AT,Created at,Créé le
+UPDATED_AT,Update at,Mis à jour le
+SETTINGS,Settings,Paramètres
+ACCOUNT,My account,Mon compte
+LANGUAGE,Language and region,Région et langue
+API_KEY,[b]API key : [/b],[b]Clé d'API : [/b]
+API_DOC,API Official Documentation,Documentation officielle de l'API
+ABOUT,About,A propos
+OTHER,Other,Autre
+CLEAR_CACHE,Clear cache,Vider le cache
+REMOVE_ACCOUNT,Remove my account permanently,Supprimé mon compte de manière permanente
+DELETE_ACCOUNT,DELETE MY ACCOUNT,SUPPRIMER MON COMPTE
+RETURN,Return,Retour
+PLEASE_SELECT_GAME,Please select game in menu to continue.,Merci de selectionner un jeu dans le menu pour continuer.
+PASSWORD_FIELD_DONT_MATCH,Password fields don't match.,Les mots de passes ne correspondent pas.
+PASSWORD_WRONG_FORMAT,Password must contain at least 6 characters 1 uppercase and 1 number,Le mot de passe doit contenir au moins 6 caractères 1 majuscule et un chiffre.
+ALL_FIELD_REQUIRED,All field is required,Tous les champs sont obligatoires.
+GAME_TO_LONG,Game name too long. Max: ,Le nom du jeu est trop long. Max:
+LEADERBOARD_TO_LONG,Leaderboard name is too long. Max: ,Le nom du leaderboard est trop long. Max: 
+CLEARING_CACHE,Clearing the cache will delete all local GameBoarder's files. Your data will not be affected but you will need to log in again on next startup.,Vider le cache supprimera tous les fichiers locaux de GameBoarder. Vos données ne seront pas affectées mais vous devrez vous reconnecter au prochain démarrage.
+REMOVING_ACCOUNT,Deleting your account is permanent; you will be logged out and no data will be saved. There is no going back.,La suppression de votre compte est définitive ; vous serez déconnecté et aucune donnée ne sera enregistrée. Il n'y a pas de retour en arrière possible.

@@ -1,0 +1,166 @@
+[gd_scene load_steps=5 format=3 uid="uid://dioj67dewwles"]
+
+[ext_resource type="Script" uid="uid://0ueusa3vifl8" path="res://scripts/Screen/leaderboard.gd" id="1_dpc1t"]
+[ext_resource type="Texture2D" uid="uid://dprr4rys8mtx7" path="res://assets/add_button.png" id="1_xnfd0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpc1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogvce"]
+
+[node name="Leaderboard" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dpc1t")
+
+[node name="Background" type="Panel" parent="."]
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = 35.0
+offset_right = -140.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dpc1t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/separation = 39
+
+[node name="Header" type="HBoxContainer" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(0, 51)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 416
+alignment = 1
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "CURRENT_LEADERBOARD"
+
+[node name="AddBoardButton" type="Button" parent="Background/VBoxContainer/Header"]
+custom_minimum_size = Vector2(51, 0)
+layout_mode = 2
+theme_type_variation = &"add_button"
+text = "NEW_LEADERBOARD"
+
+[node name="TextureRect" type="TextureRect" parent="Background/VBoxContainer/Header/AddBoardButton"]
+layout_mode = 0
+offset_left = -280.0
+offset_top = -230.0
+offset_right = 232.0
+offset_bottom = 282.0
+scale = Vector2(0.05, 0.05)
+pivot_offset = Vector2(256, 256)
+texture = ExtResource("1_xnfd0")
+
+[node name="AddMenu" type="CenterContainer" parent="Background/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="Background/VBoxContainer/AddMenu"]
+custom_minimum_size = Vector2(681, 125)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ogvce")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/AddMenu/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.5
+offset_top = -44.5
+offset_right = 301.5
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 89
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="NameInput" type="HBoxContainer" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/VBoxContainer/NameInput"]
+layout_mode = 2
+text = "LEADERBOARD_NAME"
+
+[node name="LineEdit" type="LineEdit" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/VBoxContainer/NameInput"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="IsUniqueInput" type="HBoxContainer" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/VBoxContainer/IsUniqueInput"]
+layout_mode = 2
+text = "LEADERBOARD_UNIQUE_SCORE"
+
+[node name="CheckBox" type="CheckBox" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/VBoxContainer/IsUniqueInput"]
+layout_mode = 2
+
+[node name="submitButton" type="Button" parent="Background/VBoxContainer/AddMenu/Panel/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 4
+theme_type_variation = &"base_button"
+text = "NEW_LEADERBOARD"
+
+[node name="ErrorLabel" type="Label" parent="Background/VBoxContainer/AddMenu/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 229.0
+offset_top = 91.0
+offset_right = -240.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.58316284, 0.23078474, 0.18226054, 1)
+horizontal_alignment = 1
+
+[node name="WarningLabel" type="Label" parent="Background/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "PLEASE_SELECT_GAME"
+horizontal_alignment = 1
+
+[node name="Table" type="MarginContainer" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[connection signal="pressed" from="Background/VBoxContainer/Header/AddBoardButton" to="." method="_on_add_game_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/Header/AddBoardButton" to="." method="_on_add_board_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/AddMenu/Panel/HBoxContainer/submitButton" to="." method="_on_submit_button_pressed"]

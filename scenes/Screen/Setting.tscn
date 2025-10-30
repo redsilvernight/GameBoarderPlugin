@@ -1,0 +1,349 @@
+[gd_scene load_steps=11 format=3 uid="uid://cnu84jrv36gpi"]
+
+[ext_resource type="Script" uid="uid://c8igm01knnqbo" path="res://scripts/Screen/setting.gd" id="1_dlpkq"]
+[ext_resource type="Texture2D" uid="uid://dlb2xqp1t8elk" path="res://assets/user_profil.png" id="1_lqlmm"]
+[ext_resource type="PackedScene" uid="uid://bf86xkd3r2706" path="res://scenes/language_button.tscn" id="3_ga3kg"]
+[ext_resource type="Texture2D" uid="uid://b11luo07yw8eb" path="res://assets/copy.png" id="4_iq3sg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dlpkq"]
+
+[sub_resource type="FontVariation" id="FontVariation_ga3kg"]
+
+[sub_resource type="FontFile" id="FontFile_iq3sg"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ga3kg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq3sg"]
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iq3sg"]
+
+[node name="Setting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dlpkq")
+
+[node name="Background" type="Panel" parent="."]
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = 35.0
+offset_right = -140.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dlpkq")
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 34
+
+[node name="Title" type="Label" parent="Background/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "SETTINGS"
+
+[node name="AllSettings" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="AccountSettings" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings"]
+layout_mode = 2
+text = "ACCOUNT"
+
+[node name="Panel" type="Panel" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_type_variation = &"settings_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 29
+
+[node name="TextureRect" type="TextureRect" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings/Panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("1_lqlmm")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings/Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Username" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings/Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_ga3kg")
+text = "Username"
+
+[node name="Email" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/AccountSettings/Panel/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontFile_iq3sg")
+text = "User mail adress"
+
+[node name="LanguageSettings" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/LanguageSettings"]
+layout_mode = 2
+text = "LANGUAGE"
+
+[node name="Panel" type="Panel" parent="Background/MarginContainer/VBoxContainer/AllSettings/LanguageSettings"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+mouse_filter = 1
+theme_type_variation = &"settings_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/LanguageSettings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Background/MarginContainer/VBoxContainer/AllSettings/LanguageSettings/Panel/MarginContainer"]
+
+[node name="Control" parent="Background/MarginContainer/VBoxContainer/AllSettings/LanguageSettings/Panel/MarginContainer/CanvasLayer" instance=ExtResource("3_ga3kg")]
+offset_left = 200.0
+offset_top = 322.0
+offset_right = 400.0
+offset_bottom = 362.0
+mouse_filter = 1
+
+[node name="ApiSettings" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings"]
+layout_mode = 2
+text = "API"
+
+[node name="Panel" type="Panel" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+mouse_filter = 1
+theme_type_variation = &"settings_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="ApiKey" type="RichTextLabel" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(85, 30)
+layout_mode = 2
+focus_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ga3kg")
+bbcode_enabled = true
+text = "API_KEY"
+vertical_alignment = 1
+selection_enabled = true
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "fdgngfmfgldglmgjffdfncffdfsffssfs"
+
+[node name="CopyButton" type="Button" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_iq3sg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iq3sg")
+icon = ExtResource("4_iq3sg")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -6
+
+[node name="ApiDocLink" type="LinkButton" parent="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "API_DOC"
+uri = "www.flosrent.fr/docs/api"
+
+[node name="OtherSettings" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings"]
+layout_mode = 2
+text = "OTHER"
+
+[node name="Panel" type="Panel" parent="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+mouse_filter = 1
+theme_type_variation = &"settings_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 174
+columns = 4
+
+[node name="EmptyCache" type="Button" parent="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_type_variation = &"base_button"
+text = "CLEAR_CACHE"
+
+[node name="DeleteAccount" type="Button" parent="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings/Panel/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+theme_type_variation = &"base_button"
+text = "REMOVE_ACCOUNT"
+
+[node name="AboutSettings" type="VBoxContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings"]
+layout_mode = 2
+text = "ABOUT"
+
+[node name="Panel" type="Panel" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+mouse_filter = 1
+theme_type_variation = &"settings_panel"
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 174
+columns = 4
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings/Panel/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Version 1.0.0"
+
+[node name="Label2" type="LinkButton" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings/Panel/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Gameboarder Documentation"
+
+[node name="Label3" type="Button" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings/Panel/MarginContainer/GridContainer"]
+layout_mode = 2
+disabled = true
+text = "Contact Support"
+
+[node name="Label4" type="Label" parent="Background/MarginContainer/VBoxContainer/AllSettings/AboutSettings/Panel/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "Made By Binaweb - 2025"
+
+[node name="AcceptClearCacheDialog" type="AcceptDialog" parent="."]
+oversampling_override = 1.0
+title = "Warning !"
+initial_position = 2
+size = Vector2i(316, 207)
+popup_window = true
+dialog_text = "CLEARING_CACHE"
+dialog_autowrap = true
+
+[node name="AcceptRemoveAccountDialog" type="AcceptDialog" parent="."]
+oversampling_override = 1.0
+title = "Warning !"
+initial_position = 2
+size = Vector2i(316, 207)
+popup_window = true
+ok_button_text = "10"
+dialog_text = "REMOVING_ACCOUNT"
+dialog_autowrap = true
+
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/AllSettings/ApiSettings/Panel/MarginContainer/VBoxContainer/HBoxContainer2/CopyButton" to="." method="_on_copy_button_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings/Panel/MarginContainer/GridContainer/EmptyCache" to="." method="_on_empty_cache_pressed"]
+[connection signal="pressed" from="Background/MarginContainer/VBoxContainer/AllSettings/OtherSettings/Panel/MarginContainer/GridContainer/DeleteAccount" to="." method="_on_delete_account_pressed"]
+[connection signal="confirmed" from="AcceptClearCacheDialog" to="." method="_on_accept_clear_cache_dialog_confirmed"]
+[connection signal="canceled" from="AcceptRemoveAccountDialog" to="." method="_on_accept_remove_account_dialog_canceled"]
+[connection signal="confirmed" from="AcceptRemoveAccountDialog" to="." method="_on_accept_remove_account_dialog_confirmed"]

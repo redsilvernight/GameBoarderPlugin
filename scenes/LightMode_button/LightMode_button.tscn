@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://607b0e1skiyu"]
+
+[ext_resource type="Script" uid="uid://bik261imu4bl0" path="res://scripts/LightMode_button/light_mode_button.gd" id="1_8g4mo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3qm6e"]
+
+[node name="Container" type="CanvasLayer"]
+script = ExtResource("1_8g4mo")
+
+[node name="Container" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 21.0
+offset_bottom = 74.0
+grow_horizontal = 0
+theme_override_constants/separation = -1
+
+[node name="CheckButton" type="CheckButton" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 1
+theme_override_font_sizes/font_size = 10
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3qm6e")
+shortcut_feedback = false
+alignment = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Container"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2
+text = "LIGHT_MODE"
+horizontal_alignment = 1
+
+[connection signal="toggled" from="Container/CheckButton" to="." method="_on_check_button_toggled"]

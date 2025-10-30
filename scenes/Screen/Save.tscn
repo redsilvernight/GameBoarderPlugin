@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://bymvoefhf8bg1"]
+
+[ext_resource type="Script" uid="uid://6i2o6mk25suv" path="res://scripts/Screen/save.gd" id="1_li1jy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dpc1t"]
+
+[node name="Save" type="Control"]
+clip_contents = true
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_li1jy")
+
+[node name="Background" type="Panel" parent="."]
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = 35.0
+offset_right = -140.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dpc1t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+custom_minimum_size = Vector2(1320, 830)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme_override_constants/separation = 39
+
+[node name="Header" type="HBoxContainer" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(0, 51)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 416
+alignment = 1
+
+[node name="Label" type="Label" parent="Background/VBoxContainer/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "CURRENT_SAVE"
+
+[node name="WarningLabel" type="Label" parent="Background/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "PLEASE_SELECT_GAME"
+horizontal_alignment = 1
+
+[node name="Table" type="MarginContainer" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10

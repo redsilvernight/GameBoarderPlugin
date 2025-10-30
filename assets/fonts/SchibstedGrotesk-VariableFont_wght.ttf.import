@@ -1,0 +1,41 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://cxv04jf2uh44"
+path="res://.godot/imported/SchibstedGrotesk-VariableFont_wght.ttf-6fb39f9fe9dd2c4e60bbd9f93b9a5f17.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/SchibstedGrotesk-VariableFont_wght.ttf-6fb39f9fe9dd2c4e60bbd9f93b9a5f17.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=0
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+modulate_color_glyphs=false
+hinting=1
+subpixel_positioning=0
+keep_rounding_remainders=true
+oversampling=10.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "Nouvelle configuration",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}
