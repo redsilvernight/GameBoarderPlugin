@@ -1,7 +1,7 @@
 extends Node
 
 const MAX_QUEUE_SIZE = 100
-var API_URL: String = ProjectSettings.get_setting("Gameboarder/api_url", "http://127.0.0.1:8000/api")
+var API_URL: String = ProjectSettings.get_setting("Gameboarder/api_url", "http://flosrent.fr/api")
 var http_client: HTTPRequest
 var auth
 var game

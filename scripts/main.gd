@@ -15,7 +15,7 @@ func _ready():
 		if Global.user.token != "":
 			updateScene("Gameboarder")
 	else:
-		updateScene("Index")
+		updateScene("index")
 	
 func _on_theme_changed(new_theme: Theme):
 	get_tree().root.theme = new_theme
