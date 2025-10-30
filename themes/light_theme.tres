@@ -1,16 +1,9 @@
-[gd_resource type="Theme" load_steps=56 format=3 uid="uid://d382rb2abi587"]
+[gd_resource type="Theme" load_steps=55 format=3 uid="uid://d382rb2abi587"]
 
 [ext_resource type="FontFile" uid="uid://cxv04jf2uh44" path="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf" id="2_b2586"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdfx0"]
 bg_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
-
-[sub_resource type="FontFile" id="FontFile_b2586"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7qon"]
 
@@ -340,7 +333,6 @@ CheckBox/colors/font_focus_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 CheckBox/colors/font_hover_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 CheckBox/colors/font_hover_pressed_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 CheckBox/colors/font_pressed_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
-CheckBox/fonts/font = SubResource("FontFile_b2586")
 CheckBox/styles/focus = SubResource("StyleBoxEmpty_t7qon")
 CheckBox/styles/hover = SubResource("StyleBoxEmpty_b2586")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_76oi6")
