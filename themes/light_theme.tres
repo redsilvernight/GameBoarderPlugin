@@ -1,5 +1,6 @@
-[gd_resource type="Theme" load_steps=67 format=3 uid="uid://d382rb2abi587"]
+[gd_resource type="Theme" load_steps=68 format=3 uid="uid://d382rb2abi587"]
 
+[ext_resource type="FontFile" uid="uid://cxv04jf2uh44" path="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf" id="2_b2586"]
 [ext_resource type="FontFile" uid="uid://cieaxojd7oc3r" path="res://assets/fonts/SchibstedGrotesk-Bold.ttf" id="2_clh54"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdfx0"]
@@ -404,7 +405,7 @@ corner_radius_bottom_left = 8
 
 [resource]
 resource_name = "light_theme"
-default_font = SubResource("FontVariation_clh54")
+default_font = ExtResource("2_b2586")
 AcceptDialog/styles/panel = SubResource("StyleBoxFlat_hdfx0")
 CheckBox/colors/checkbox_checked_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 CheckBox/colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)

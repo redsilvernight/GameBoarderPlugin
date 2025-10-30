@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=51 format=3 uid="uid://bjct5hekx2mcd"]
+[gd_resource type="Theme" load_steps=52 format=3 uid="uid://bjct5hekx2mcd"]
+
+[ext_resource type="FontFile" uid="uid://cxv04jf2uh44" path="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf" id="1_pnelt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pnelt"]
 
@@ -317,6 +319,7 @@ corner_radius_bottom_left = 8
 
 [resource]
 resource_name = "dark_theme"
+default_font = ExtResource("1_pnelt")
 CheckBox/colors/checkbox_checked_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 CheckBox/colors/checkbox_unchecked_color = Color(1, 1, 1, 1)
 CheckBox/colors/font_color = Color(0.8, 0.8, 0.8, 1)
