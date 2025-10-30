@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=57 format=3 uid="uid://d382rb2abi587"]
+[gd_resource type="Theme" load_steps=56 format=3 uid="uid://d382rb2abi587"]
 
 [ext_resource type="FontFile" uid="uid://cxv04jf2uh44" path="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf" id="2_b2586"]
 
@@ -21,13 +21,6 @@ cache/0/16/0/scale = 1.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k48q0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_clh54"]
-
-[sub_resource type="FontFile" id="FontFile_xu2q4"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a83b"]
 
@@ -353,7 +346,6 @@ CheckBox/styles/hover = SubResource("StyleBoxEmpty_b2586")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_76oi6")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_k48q0")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_clh54")
-CheckButton/fonts/font = SubResource("FontFile_xu2q4")
 CheckButton/styles/focus = SubResource("StyleBoxEmpty_0a83b")
 CheckButton/styles/hover = SubResource("StyleBoxEmpty_xu2q4")
 CheckButton/styles/normal = SubResource("StyleBoxEmpty_x03xt")
