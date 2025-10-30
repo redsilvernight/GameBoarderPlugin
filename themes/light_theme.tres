@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=68 format=3 uid="uid://d382rb2abi587"]
+[gd_resource type="Theme" load_steps=67 format=3 uid="uid://d382rb2abi587"]
 
 [ext_resource type="FontFile" uid="uid://cxv04jf2uh44" path="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf" id="2_b2586"]
 [ext_resource type="FontFile" uid="uid://cieaxojd7oc3r" path="res://assets/fonts/SchibstedGrotesk-Bold.ttf" id="2_clh54"]
@@ -35,13 +35,6 @@ cache/0/16/0/scale = 1.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xu2q4"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x03xt"]
-
-[sub_resource type="FontFile" id="FontFile_clh54"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="FontFile_0a83b"]
 cache/0/16/0/ascent = 0.0
@@ -425,7 +418,6 @@ CheckButton/styles/focus = SubResource("StyleBoxEmpty_0a83b")
 CheckButton/styles/hover = SubResource("StyleBoxEmpty_xu2q4")
 CheckButton/styles/normal = SubResource("StyleBoxEmpty_x03xt")
 Label/colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-Label/fonts/font = SubResource("FontFile_clh54")
 LineEdit/colors/caret_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 LineEdit/colors/font_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 LineEdit/constants/caret_width = 2
