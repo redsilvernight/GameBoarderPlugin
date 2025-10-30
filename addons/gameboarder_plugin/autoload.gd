@@ -1,7 +1,7 @@
 extends Node
 
 const MAX_QUEUE_SIZE = 100
-var API_URL: String = ProjectSettings.get_setting("Gameboarder/api_url", "http://flosrent.fr/api")
+var API_URL: String = ProjectSettings.get_setting("Gameboarder/api_url", "https://flosrent.fr/api")
 var http_client: HTTPRequest
 var auth
 var game
@@ -81,7 +81,7 @@ func _on_request_completed(result: int, response_code: int, headers: PackedStrin
 	var callback: Callable = http_client.get_meta("callback")
 	var response: Dictionary = {}
 	
-	if result != HTTPRequest.RESULT_SUCCESS:
+	if response.is_empty():
 		printerr("[GameBoarder] Network error: ", result)
 		response = {"error": "Network error", "code": result}
 	else:

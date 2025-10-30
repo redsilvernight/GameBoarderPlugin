@@ -42,8 +42,8 @@ func showError(error_label : Label, error_message : String):
 	error_label.text = error_message
 	error_label.show()
 
-func updateScene(scene: String = "Index"):
-	if scene == "Index":
+func updateScene(scene: String = "index"):
+	if scene == "index":
 		var index_path = str("res://scenes/", scene, ".tscn")
 		_load_scene(scene, index_path)
 	else:
@@ -61,7 +61,7 @@ func updateScene(scene: String = "Index"):
 		
 func _load_scene(scene: String, scene_path: String):
 	var scene_loaded = load(scene_path)
-	if scene == "Gameboarder" or scene == "Index":
+	if scene == "Gameboarder" or scene == "index":
 		if $Background.get_node_or_null("Gameboard"):
 			if $Background.get_node("Gameboard").get_children().size() > 2:
 				pass
