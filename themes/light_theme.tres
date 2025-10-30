@@ -1,7 +1,6 @@
-[gd_resource type="Theme" load_steps=67 format=3 uid="uid://d382rb2abi587"]
+[gd_resource type="Theme" load_steps=57 format=3 uid="uid://d382rb2abi587"]
 
 [ext_resource type="FontFile" uid="uid://cxv04jf2uh44" path="res://assets/fonts/SchibstedGrotesk-VariableFont_wght.ttf" id="2_b2586"]
-[ext_resource type="FontFile" uid="uid://cieaxojd7oc3r" path="res://assets/fonts/SchibstedGrotesk-Bold.ttf" id="2_clh54"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hdfx0"]
 bg_color = Color(0.7019608, 0.7019608, 0.7019608, 1)
@@ -36,18 +35,6 @@ cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x03xt"]
 
-[sub_resource type="FontFile" id="FontFile_0a83b"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rr8x"]
 content_margin_left = 5.0
 bg_color = Color(1, 1, 1, 1)
@@ -61,13 +48,6 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 anti_aliasing = false
-
-[sub_resource type="FontFile" id="FontFile_fo6du"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ldnbf"]
 
@@ -94,13 +74,6 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-
-[sub_resource type="FontFile" id="FontFile_t7qon"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4v2r6"]
 
@@ -145,16 +118,6 @@ corner_radius_bottom_left = 8
 shadow_color = Color(0, 0, 0, 0.25882354)
 shadow_size = 6
 
-[sub_resource type="FontVariation" id="FontVariation_clh54"]
-base_font = ExtResource("2_clh54")
-
-[sub_resource type="FontFile" id="FontFile_k48q0"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3rr8x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65ome"]
@@ -192,15 +155,6 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 anti_aliasing = false
-
-[sub_resource type="FontFile" id="FontFile_3rr8x"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
-[sub_resource type="FontVariation" id="FontVariation_65ome"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_76wis"]
 
@@ -309,13 +263,6 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="FontFile" id="FontFile_x03xt"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv7rp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldnbf"]
@@ -363,13 +310,6 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-
-[sub_resource type="FontFile" id="FontFile_65ome"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6indo"]
 
@@ -422,13 +362,11 @@ LineEdit/colors/caret_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 LineEdit/colors/font_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 LineEdit/constants/caret_width = 2
 LineEdit/font_sizes/font_size = 20
-LineEdit/fonts/font = SubResource("FontFile_0a83b")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_3rr8x")
 LinkButton/colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 LinkButton/colors/font_focus_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 LinkButton/colors/font_hover_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 LinkButton/colors/font_pressed_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
-LinkButton/fonts/font = SubResource("FontFile_fo6du")
 MenuArrow/base_type = &"Button"
 MenuArrow/styles/focus = SubResource("StyleBoxEmpty_ldnbf")
 MenuArrow/styles/hover = SubResource("StyleBoxFlat_b2586")
@@ -436,15 +374,12 @@ MenuArrow/styles/normal = SubResource("StyleBoxFlat_1qid6")
 OptionButton/colors/font_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 OptionButton/colors/font_focus_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 OptionButton/colors/font_hover_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
-OptionButton/fonts/font = SubResource("FontFile_t7qon")
 OptionButton/styles/focus = SubResource("StyleBoxEmpty_4v2r6")
 OptionButton/styles/hover = SubResource("StyleBoxFlat_tiosi")
 OptionButton/styles/normal = SubResource("StyleBoxFlat_vmqgu")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_76oi6")
 RichTextLabel/colors/default_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-RichTextLabel/fonts/bold_font = SubResource("FontVariation_clh54")
 TabContainer/colors/font_unselected_color = Color(0, 0, 0, 0.5568628)
-TabContainer/fonts/font = SubResource("FontFile_k48q0")
 TabContainer/styles/panel = SubResource("StyleBoxEmpty_3rr8x")
 TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_65ome")
 TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_x03xt")
@@ -453,8 +388,6 @@ TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_xu2q4")
 Tree/colors/font_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
 Tree/colors/font_hovered_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
 Tree/colors/title_button_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
-Tree/fonts/font = SubResource("FontFile_3rr8x")
-Tree/fonts/title_button_font = SubResource("FontVariation_65ome")
 Tree/styles/focus = SubResource("StyleBoxEmpty_76wis")
 Tree/styles/hovered = SubResource("StyleBoxEmpty_hdfx0")
 Tree/styles/panel = SubResource("StyleBoxFlat_k48q0")
@@ -494,7 +427,6 @@ screen_button/colors/font_focus_color = Color(0.30588236, 0.1764706, 0.41960785,
 screen_button/colors/font_hover_color = Color(1, 1, 1, 1)
 screen_button/colors/font_pressed_color = Color(0.30588236, 0.1764706, 0.41960785, 1)
 screen_button/font_sizes/font_size = 14
-screen_button/fonts/font = SubResource("FontFile_x03xt")
 screen_button/styles/focus = SubResource("StyleBoxEmpty_jv7rp")
 screen_button/styles/hover = SubResource("StyleBoxFlat_ldnbf")
 screen_button/styles/normal = SubResource("StyleBoxFlat_4v2r6")
@@ -509,8 +441,6 @@ tree_selected/colors/font_hovered_color = Color(1, 1, 1, 1)
 tree_selected/colors/font_hovered_selected_color = Color(1, 1, 1, 1)
 tree_selected/colors/font_selected_color = Color(0.5882353, 0.5882353, 0.5882353, 1)
 tree_selected/colors/title_button_color = Color(0.34901962, 0.34901962, 0.34901962, 1)
-tree_selected/fonts/font = SubResource("FontFile_65ome")
-tree_selected/fonts/title_button_font = SubResource("FontVariation_clh54")
 tree_selected/styles/focus = SubResource("StyleBoxEmpty_6indo")
 tree_selected/styles/hovered = SubResource("StyleBoxFlat_v2tx4")
 tree_selected/styles/hovered_selected = SubResource("StyleBoxFlat_v2tx4")
