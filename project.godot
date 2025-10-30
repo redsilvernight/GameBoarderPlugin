@@ -10,7 +10,7 @@ config_version=5
 
 [Gameboarder]
 
-api_url="http://flosrent.fr/api"
+api_url="https://flosrent.fr/api"
 
 [application]
 
