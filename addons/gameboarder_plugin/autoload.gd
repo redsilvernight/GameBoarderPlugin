@@ -81,7 +81,7 @@ func _on_request_completed(result: int, response_code: int, headers: PackedStrin
 	var callback: Callable = http_client.get_meta("callback")
 	var response: Dictionary = {}
 	
-	if response.is_empty():
+	if result != HTTPRequest.RESULT_SUCCESS:
 		printerr("[GameBoarder] Network error: ", result)
 		response = {"error": "Network error", "code": result}
 	else:
