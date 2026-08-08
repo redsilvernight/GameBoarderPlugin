@@ -65,8 +65,8 @@ func addLeaderboard() -> void:
 		main.showError(error_label, tr("ALL_FIELD_REQUIRED"))
 
 func getLeaderboard() -> void :
-	GameBoarder.game.getLeaderboard(Global.current_game.values()[0], func(_code, response):
-		var all_leaderboards = response
+	GameBoarder.game.getGameDetails(Global.current_game.values()[0], func(_code, response):
+		var all_leaderboards = response.leaderboards
 		viewAllLeaderboard(all_leaderboards)
 	)
 

@@ -22,6 +22,19 @@ func login(email: String, password: String, callback: Callable):
 	
 	api._make_request(HTTPClient.METHOD_POST, "/login", data, callback)
 
+func authenticatePlayer(player_name: String, player_password: String, game_id: int, callback: Callable):
+	var data = {
+		"player_name": player_name,
+		"player_password": player_password,
+		"game_id": game_id
+	}
+
+	api._make_request(HTTPClient.METHOD_POST, "/players/authenticate", data, func(code, response):
+		if code == 200 and response.has("access_token"):
+			api.set_player_token(response.access_token)
+		callback.call(code, response)
+	, "none")
+
 func me(callback):
 	api._make_request(HTTPClient.METHOD_GET, "/me", {}, callback)
 	

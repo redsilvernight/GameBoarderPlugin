@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1pjudf3il1ou"]
+[gd_scene format=3 uid="uid://c1pjudf3il1ou"]
 
 [ext_resource type="PackedScene" uid="uid://607b0e1skiyu" path="res://scenes/LightMode_button/LightMode_button.tscn" id="1_elqb8"]
 [ext_resource type="Script" uid="uid://cg6st2p7oigpa" path="res://scripts/main.gd" id="1_rvslj"]
@@ -13,7 +13,7 @@ shader_parameter/softness = 2.0
 shader_parameter/center = Vector2(0.5, 0.5)
 shader_parameter/aspect_y = 0.5470000227226199
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" unique_id=382525180]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rvslj")
 
-[node name="Background" type="Panel" parent="."]
+[node name="Background" type="Panel" parent="." unique_id=341065896]
 material = SubResource("ShaderMaterial_rarhs")
 clip_contents = true
 custom_minimum_size = Vector2(1280, 720)
@@ -34,4 +34,4 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="LightModSwitch" parent="Background" instance=ExtResource("1_elqb8")]
+[node name="LightModSwitch" parent="Background" unique_id=2137632306 instance=ExtResource("1_elqb8")]

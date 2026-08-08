@@ -10,14 +10,14 @@ func newHighscore(player_id: int, leaderboard_id: int, highscore: int, callback:
 		"player_id": player_id,
 		"leaderboard_id": leaderboard_id,
 		"score": highscore
-	}, callback)
+	}, callback, "player")
 
 func newScore(player_id: int, leaderboard_id: int, score: int, callback: Callable):
-	api._make_request(HTTPClient.METHOD_POST, "/scores/", {
+	api._make_request(HTTPClient.METHOD_POST, "/scores", {
 		"player_id": player_id,
 		"leaderboard_id": leaderboard_id,
 		"score": score
-	}, callback)
+	}, callback, "player")
 
 func delete(score_id: int, callback: Callable):
 	api._make_request(HTTPClient.METHOD_DELETE, str("/scores/", score_id), {}, callback)

@@ -10,15 +10,8 @@ func getGames(user_id: int, callback: Callable):
 		callback.call(_code, response.games)	
 	)
 
-func getLeaderboard(game_id: int, callback: Callable):
-	api._make_request(HTTPClient.METHOD_GET, str("/games/", game_id), {}, func(_code, response):
-		callback.call(_code, response.leaderboards)	
-	)
-
-func getPlayers(game_id: int, callback: Callable):
-	api._make_request(HTTPClient.METHOD_GET, str("/games/", game_id), {}, func(_code, response):
-		callback.call(_code, response.players)	
-	)
+func getGameDetails(game_id: int, callback: Callable):
+	api._make_request(HTTPClient.METHOD_GET, str("/games/", game_id), {}, callback)
 
 func getSaves(game_id: int, callback: Callable):
 	api._make_request(HTTPClient.METHOD_GET, str("/saves/", game_id), {}, func(_code, response):

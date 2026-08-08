@@ -13,6 +13,14 @@ var timeout = 10.0
 var _request_queue: Array = []
 var _is_busy: bool = false
 
+var player_token: String = ""
+
+func set_player_token(token: String) -> void:
+	player_token = token
+
+func clear_player_token() -> void:
+	player_token = ""
+
 func _ready() -> void:
 	http_client = HTTPRequest.new()
 	add_child(http_client)
@@ -33,14 +41,22 @@ func _ready() -> void:
 	score.setup(self)
 	save.setup(self)
 
-func _make_request(method, endpoint: String, data: Dictionary = {}, callback: Callable = Callable()) -> void:
+func _make_request(method, endpoint: String, data: Dictionary = {}, callback: Callable = Callable(), auth_mode: String = "developer") -> void:
 	if _request_queue.size() >= MAX_QUEUE_SIZE:
 		printerr("[GameBoarder] Queue full, dropping request")
 		if callback.is_valid():
 			callback.call(0, {"error": "Queue overflow"})
 		return
 	
-	var current_token = Global.user.token if Global.user else ""
+	var current_token = ""
+	match auth_mode:
+		"player":
+			current_token = player_token
+		"none":
+			current_token = ""
+		_:
+			current_token = Global.user.token if Global.user else ""
+
 	_request_queue.append({
 		"method": method,
 		"endpoint": endpoint,

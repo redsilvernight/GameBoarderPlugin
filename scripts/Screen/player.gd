@@ -75,8 +75,8 @@ func addPlayer() -> void:
 		return
 	
 func getPlayers() -> void :
-	GameBoarder.game.getPlayers(Global.current_game.values()[0], func(_code, response):
-		var all_players = response
+	GameBoarder.game.getGameDetails(Global.current_game.values()[0], func(_code, response):
+		var all_players = response.players
 		viewAllPlayers(all_players)
 	)
 

@@ -10,13 +10,17 @@ config_version=5
 
 [Gameboarder]
 
-api_url="https://flosrent.fr/api"
+api_url="http://127.0.0.1:8000/api"
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
 config/name="GameBoarderPlugin"
 run/main_scene="uid://c1pjudf3il1ou"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0.30588236, 0.1764706, 0.41960785, 1)
 boot_splash/image="uid://bforb6rtg5gjc"
 config/icon="uid://bforb6rtg5gjc"
@@ -25,7 +29,7 @@ config/icon="uid://bforb6rtg5gjc"
 
 Global="*res://scripts/global.gd"
 ThemeManager="*res://scripts/Hud/theme_manager.gd"
-GameBoarder="*res://addons/gameboarder_plugin/autoload.gd"
+GameBoarder="*uid://baavnbd557qu3"
 LanguageManager="*res://scripts/Hud/language_manager.gd"
 
 [display]
