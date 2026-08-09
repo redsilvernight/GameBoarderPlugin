@@ -9,17 +9,25 @@ var leaderboard
 var player
 var score
 var save
+var session
 var timeout = 10.0
 var _request_queue: Array = []
 var _is_busy: bool = false
 
 var player_token: String = ""
+var dev_token: String = ""
 
 func set_player_token(token: String) -> void:
 	player_token = token
 
 func clear_player_token() -> void:
 	player_token = ""
+
+func set_dev_token(token: String) -> void:
+	dev_token = token
+
+func clear_dev_token() -> void:
+	dev_token = ""
 
 func _ready() -> void:
 	http_client = HTTPRequest.new()
@@ -33,6 +41,7 @@ func _ready() -> void:
 	player = load("res://addons/gameboarder_plugin/player.gd").new()
 	score = load("res://addons/gameboarder_plugin/score.gd").new()
 	save = load("res://addons/gameboarder_plugin/save.gd").new()
+	session = load("res://addons/gameboarder_plugin/session.gd").new()
 	
 	auth.setup(self)
 	game.setup(self)
@@ -40,6 +49,7 @@ func _ready() -> void:
 	player.setup(self)
 	score.setup(self)
 	save.setup(self)
+	session.setup(self)
 
 func _make_request(method, endpoint: String, data: Dictionary = {}, callback: Callable = Callable(), auth_mode: String = "developer") -> void:
 	if _request_queue.size() >= MAX_QUEUE_SIZE:
@@ -55,7 +65,7 @@ func _make_request(method, endpoint: String, data: Dictionary = {}, callback: Ca
 		"none":
 			current_token = ""
 		_:
-			current_token = Global.user.token if Global.user else ""
+			current_token = dev_token
 
 	_request_queue.append({
 		"method": method,

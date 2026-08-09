@@ -12,7 +12,11 @@ func register(email: String, name: String, password: String, callback: Callable)
 		"password": password
 	}
 	
-	api._make_request(HTTPClient.METHOD_POST, "/register", data, callback)
+	api._make_request(HTTPClient.METHOD_POST, "/register", data, func(code, response):
+		if code == 200 and response.has("access_token"):
+			api.set_dev_token(response.access_token)
+		callback.call(code, response)
+	, "none")
 
 func login(email: String, password: String, callback: Callable):
 	var data = {
@@ -20,7 +24,11 @@ func login(email: String, password: String, callback: Callable):
 		"password": password
 	}
 	
-	api._make_request(HTTPClient.METHOD_POST, "/login", data, callback)
+	api._make_request(HTTPClient.METHOD_POST, "/login", data, func(code, response):
+		if code == 200 and response.has("access_token"):
+			api.set_dev_token(response.access_token)
+		callback.call(code, response)
+	, "none")
 
 func authenticatePlayer(player_name: String, player_password: String, game_id: int, callback: Callable):
 	var data = {
@@ -39,7 +47,13 @@ func me(callback):
 	api._make_request(HTTPClient.METHOD_GET, "/me", {}, callback)
 	
 func logout(callback):
-	api._make_request(HTTPClient.METHOD_POST, "/logout", {}, callback)
+	api._make_request(HTTPClient.METHOD_POST, "/logout", {}, func(code, response):
+		api.clear_dev_token()
+		callback.call(code, response)
+	)
 
 func deleteAccount(user_id, callback):
-	api._make_request(HTTPClient.METHOD_DELETE, str("/users/", user_id), {}, callback)
+	api._make_request(HTTPClient.METHOD_DELETE, str("/users/", user_id), {}, func(code, response):
+		api.clear_dev_token()
+		callback.call(code, response)
+	)
