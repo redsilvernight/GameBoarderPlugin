@@ -1,6 +1,9 @@
 extends Node
 
 const MAX_QUEUE_SIZE = 100
+const DEVICE_ID_PATH = "user://gameboarder_device_id.txt"
+const CLAIMED_MARKER_PATH = "user://gameboarder_claimed.txt"
+
 var API_URL: String = ProjectSettings.get_setting("Gameboarder/api_url", "https://flosrent.fr/api")
 var http_client: HTTPRequest
 var auth
@@ -22,6 +25,49 @@ func set_player_token(token: String) -> void:
 
 func clear_player_token() -> void:
 	player_token = ""
+
+func get_or_create_device_id() -> String:
+	if FileAccess.file_exists(DEVICE_ID_PATH):
+		var f = FileAccess.open(DEVICE_ID_PATH, FileAccess.READ)
+		var existing_id = f.get_as_text().strip_edges()
+		f.close()
+		if existing_id.length() == 36:
+			return existing_id
+
+	var new_id = _generate_uuid_v4()
+	var f2 = FileAccess.open(DEVICE_ID_PATH, FileAccess.WRITE)
+	if f2:
+		f2.store_string(new_id)
+		f2.close()
+	return new_id
+
+func _generate_uuid_v4() -> String:
+	var crypto = Crypto.new()
+	var bytes: PackedByteArray = crypto.generate_random_bytes(16)
+	bytes[6] = (bytes[6] & 0x0F) | 0x40
+	bytes[8] = (bytes[8] & 0x3F) | 0x80
+	var hex = bytes.hex_encode()
+	return "%s-%s-%s-%s-%s" % [
+		hex.substr(0, 8), hex.substr(8, 4), hex.substr(12, 4),
+		hex.substr(16, 4), hex.substr(20, 12)
+	]
+
+func mark_account_claimed(player_name: String) -> void:
+	var f = FileAccess.open(CLAIMED_MARKER_PATH, FileAccess.WRITE)
+	if f:
+		f.store_string(player_name)
+		f.close()
+
+func is_account_claimed() -> bool:
+	return FileAccess.file_exists(CLAIMED_MARKER_PATH)
+
+func get_claimed_player_name() -> String:
+	if not is_account_claimed():
+		return ""
+	var f = FileAccess.open(CLAIMED_MARKER_PATH, FileAccess.READ)
+	var stored_name = f.get_as_text().strip_edges()
+	f.close()
+	return stored_name
 
 func set_dev_token(token: String) -> void:
 	dev_token = token
